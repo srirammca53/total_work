@@ -1,0 +1,29 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :emp_name %><br />
+    <%= f.text_field :emp_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emp_age %><br />
+    <%= f.text_field :emp_age %>
+  </div>
+ <div>
+   <%= f.label :emp_department %>
+    <%= f.select "emp_department", options_for_select([ "Ruby on Rails",".net","php","cis","web designers"], "select department") %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

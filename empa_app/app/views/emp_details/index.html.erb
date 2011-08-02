@@ -1,0 +1,21 @@
+<h1>Listing emp_details</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emp_details.each do |emp_detail| %>
+  <tr>
+    <td><%= link_to 'Show', emp_detail %></td>
+    <td><%= link_to 'Edit', edit_emp_detail_path(emp_detail) %></td>
+    <td><%= link_to 'Destroy', emp_detail, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Emp detail', new_emp_detail_path %>

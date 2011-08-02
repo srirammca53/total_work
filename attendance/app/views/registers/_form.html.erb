@@ -1,0 +1,34 @@
+<%= form_for(@register) do |f| %>
+  <% if @register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@register.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+      <% @register.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :empname %><br />
+    <%= f.text_field :empname %>
+  </div>
+  <div class="field">
+    <%= f.label :empage %><br />
+    <%= f.text_field :empage %>
+  </div>
+  <div class="field">
+    <%= f.label :empsalary %><br />
+    <%= f.text_field :empsalary %>
+  </div>
+
+<div>
+   <%= f.label :empdepartment %>
+    <%= f.select "empdepartment", options_for_select([ "Ruby on Rails",".net","php","cis","web designers"], "select department") %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+<%= form_for(@document, :html => {:multipart => true}) do |f| %>
+  
+<% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@document.errors.count, "error") %> prohibited this dairy from being saved:</h2>
+
+      <ul>
+      <% @document.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+
+<div>
+
+<%= f.label :file %><br/>
+<%= f.file_field :file %> 
+
+</div>
+
+  <div>
+    <%= f.label :password %><br/>
+    <%= f.text_field :password %>
+  </div><br>
+
+<div>
+
+<%= f.label :expiry_date %><br/>
+<%= f.text_field :expiry_date %> 
+</div>
+<br>
+
+
+<br>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

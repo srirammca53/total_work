@@ -1,0 +1,32 @@
+<h1>List of Employees</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>salary</th>
+    <th>department</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registers.each do |register| %>
+  <tr>
+    <td><%= register.empname %></td>
+    <td><%= register.empage %></td>
+    <td><%= register.empsalary %></td>
+    <td><%= register.empdepartment %></td>
+  
+    <td><%= link_to 'Show', register %></td>
+    <td><%= link_to 'Edit', edit_register_path(register) %></td>
+    <td><%= link_to 'Destroy', register, :confirm => 'Are you sure?', :method => :delete %></td>
+     
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Employee', new_register_path %>
+
+

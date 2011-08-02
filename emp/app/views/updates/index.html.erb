@@ -1,0 +1,25 @@
+<%= form_for([@post, @post.update.build]) do |f| %>
+<div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+     <%=f.label :present %><br /> 	
+    <%=  f.check_box(:present,{:multipart => true }, "present",nil)
+ %> 
+ 
+  </div>
+  <div class="field">
+    <%=f.label :late %><br /> 	
+    <%= f.check_box(:late,{:multipart => true }, "late",nil) %> 
+ 
+  </div>
+  <div class="field">
+    <%=f.label :absent %><br /> 	
+    <%= f.check_box(:absent,{:multipart => true }, "absent",nil) %> 
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

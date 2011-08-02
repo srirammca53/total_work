@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  e_id: 1
+  date: 2011-07-15
+  present: MyString
+  late: MyString
+  absent: MyString
+
+two:
+  e_id: 1
+  date: 2011-07-15
+  present: MyString
+  late: MyString
+  absent: MyString

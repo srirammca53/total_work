@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2011-07-14
+  present: MyString
+  late: MyString
+  absent: MyString
+  post: 
+
+two:
+  date: 2011-07-14
+  present: MyString
+  late: MyString
+  absent: MyString
+  post: 

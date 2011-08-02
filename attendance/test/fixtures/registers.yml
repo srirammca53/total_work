@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  empname: MyString
+  empage: 1
+  empsalary: 1
+  empdepartment: MyString
+
+two:
+  empname: MyString
+  empage: 1
+  empsalary: 1
+  empdepartment: MyString

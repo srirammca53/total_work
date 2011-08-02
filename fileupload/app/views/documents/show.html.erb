@@ -1,0 +1,21 @@
+<center>
+<p id="notice"><%= notice %></p>
+
+<table border=1px>
+<tr>
+  <td>File:</td>
+  <td><%= @document.file %></td>
+</tr>
+<tr>
+  <td><b>Password:</b></td>
+  <td><%= @document.password %></td>
+</tr>
+<tr>
+  <td><b>Expiry date:</b></td>
+  <td><%= @document.expiry_date %></td>
+</tr>
+
+</table>
+
+<%= link_to 'Back', documents_path %>
+</center>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  password: MyString
+  days: 1
+
+two:
+  password: MyString
+  days: 1
